@@ -1,12 +1,11 @@
 terraform {
-/*
-cloud {
+/*cloud {
     organization = "policy-as-code-training"
     workspaces {
       name = "tf-vault-qa-rock"
     }
-*/
   }
+  */
   required_providers {
     aws = {
       source = "hashicorp/aws"
@@ -126,10 +125,4 @@ module "ec2_instances" {
     project     = "project-alpha",
     environment = "development"
   }
-}
-
-module "s3-bucket-rock" {
-  source  = "app.terraform.io/policy-as-code-training/s3-bucket-rock/aws"
-  version = "1.3.0"
-  bucket_name = "rock-bucket-12345"
 }
