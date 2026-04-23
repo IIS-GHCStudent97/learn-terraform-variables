@@ -127,3 +127,10 @@ module "ec2_instances" {
     environment = "development"
   }
 }
+
+
+module "s3-bucket-rock" {
+  source  = "app.terraform.io/policy-as-code-training/s3-bucket-rock/aws"
+  version = "1.2.0"
+  bucket_name = "bucket1"
+}
